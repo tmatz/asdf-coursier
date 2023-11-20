@@ -30,7 +30,7 @@ get_platform() {
 }
 
 ARCH_PLATFORM="$(get_arch)-$(get_platform)"
-if [[ "$ARCH_PLATFORM" == "aarch64-apple-darwin" ]]; then
+if [[ "$ARCH_PLATFORM" == "aarch64-apple-darwin" || "$ARCH_PLATFORM" == "aarch64-pc-linux" ]]; then
   GH_REPO="https://github.com/VirtusLab/coursier-m1"
 else
   GH_REPO="https://github.com/coursier/coursier"
